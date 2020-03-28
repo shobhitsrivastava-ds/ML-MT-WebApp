@@ -8,4 +8,4 @@ tensorflow==2.0.0
 Pillow>=5.4.0
 numpy==1.17.2
 sklearn==0.21.3
-pandas=0.25.1
+pandas==0.25.1

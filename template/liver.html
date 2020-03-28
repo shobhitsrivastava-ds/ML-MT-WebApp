@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+	<title>liver_pred</title>
+    
+</head>
+<body>
+    <header class="site-header">
+  <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+    <div class="container">
+      <a class="navbar-brand mr-4" href="/">ML-MT App</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggle">
+        <div class="navbar-nav mr-auto">
+          <a class="nav-item nav-link" href="/">Home</a>
+          <a class="nav-item nav-link" href="/about">About</a>
+          <a class="nav-item nav-link" href="/cancer">Cancer</a>
+          <a class="nav-item nav-link" href="/diabetes">Diabetes</a>
+          <a class="nav-item nav-link" href="/heart">Heart</a>
+          <a class="nav-item nav-link" href="/liver">Liver</a>
+          <a class="nav-item nav-link" href="/kidney">Kidney</a>
+           <a class="nav-item nav-link" href="/Malaria">Malaria</a>
+           <a class="nav-item nav-link" href="/Pneumonia">Pneumonia</a>
+        </div>
+        <!-- Navbar Right Side 
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="/login">Login</a>
+          <a class="nav-item nav-link" href="/register">Register</a>
+        </div>-->
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="container",class="form-group">
+        <h2>Details : </h2>
+    <h2>Welcome</h2>
+    <h3>Enter the Following parameters :</h3>
+  <form action="/result" method="POST">
+    <label for="Age">Age : </label>
+    <input type="text" id="Age" name="Age">
+    <br>
+
+    <label for="Gender">Gender : </label>
+    <input type="text" id="Gender" name="Gender">
+    <br>
+
+    <label for="Total_Bilirubin">Total_Bilirubin : </label>
+    <input type="text" id="Total_Bilirubin" name="Total_Bilirubin">
+    <br>
+
+    <label for="Direct_Bilirubin">Direct_Bilirubin : </label>
+    <input type="text" id="Direct_Bilirubin" name="Direct_Bilirubin">
+    <br>
+
+    <label for="Alkaline_Phosphotase">Alkaline_Phosphotase : </label>
+    <input type="text" id="Alkaline_Phosphotase" name="Alkaline_Phosphotase">
+    <br>
+
+    <label for="Alamine_Aminotransferase">Alamine_Aminotransferase : </label>
+    <input type="text" id="Alamine_Aminotransferase" name="Alamine_Aminotransferase">
+    <br>
+
+    <label for="Aspartate_Aminotransferase">Aspartate_Aminotransferase : </label>
+    <input type="text" id="Aspartate_Aminotransferase" name="Aspartate_Aminotransferase">
+    <br>
+
+    <label for="Total_Protiens">Total_Protiens : </label>
+    <input type="text" id="Total_Protiens" name="Total_Protiens">
+    <br>
+
+    <label for="Albumin">Albumin : </label>
+    <input type="text" id="Albumin" name="Albumin">
+    <br>
+
+    <label for="Albumin_and_Globulin_Ratio">Albumin_and_Globulin_Ratio : </label>
+    <input type="text" id="Albumin_and_Globulin_Ratio" name="Albumin_and_Globulin_Ratio">
+    <br>
+    <br>
+
+    <input type="submit" value="Submit"><br><br>
+</form>
+
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+</body>
+</html>

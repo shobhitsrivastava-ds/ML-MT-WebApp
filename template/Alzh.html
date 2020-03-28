@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+	<title>Diabetes_pred</title>
+    
+</head>
+<body>
+    <header class="site-header">
+  <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+    <div class="container">
+      <a class="navbar-brand mr-4" href="/">ML-MT App</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggle">
+        <div class="navbar-nav mr-auto">
+          <a class="nav-item nav-link" href="/">Home</a>
+          <a class="nav-item nav-link" href="/about">About</a>
+          <a class="nav-item nav-link" href="/cancer">Cancer</a>
+          <a class="nav-item nav-link" href="/diabetes">Diabetes</a>
+          <a class="nav-item nav-link" href="/diabetes">Heart</a>
+          <a class="nav-item nav-link" href="/diabetes">Alzheimer</a>
+        </div>
+        <!-- Navbar Right Side -->
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="/login">Login</a>
+          <a class="nav-item nav-link" href="/register">Register</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="container",class="form-group">
+        <h2>Details : </h2>
+    <h2>Welcome</h2>
+    <h3>Enter the Following parameters :</h3>
+  <form action="/result" method="POST">
+    <label for="Pregnancies">Pregnancies : </label>
+    <input type="text" id="Pregnancies" name="Pregnancies">
+    <br>
+
+    <label for="Glucose">Glucose : </label>
+    <input type="text" id="Glucose" name="Glucose">
+    <br>
+
+    <label for="BloodPressure">BloodPressure : </label>
+    <input type="text" id="BloodPressure" name="BloodPressure">
+    <br>
+
+    <label for="SkinThickness">SkinThickness : </label>
+    <input type="text" id="SkinThickness" name="SkinThickness">
+    <br>
+
+    <label for="Insulin">Insulin : </label>
+    <input type="text" id="Insulin" name="Insulin">
+    <br>
+
+    <label for="BMI">BMI : </label>
+    <input type="text" id="BMI" name="BMI">
+    <br>
+
+    <label for="DiabetesPedigreeFunction">DiabetesPedigreeFunction : </label>
+    <input type="text" id="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction">
+    <br>
+
+    <label for="Age">Age : </label>
+    <input type="text" id="Age" name="Age">
+    <br>
+    <br>
+
+    <input type="submit" value="Submit">
+</form>
+
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+</body>
+</html>

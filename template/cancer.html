@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+	<title>Cancer_pred</title>
+</head>
+<body>
+    <header class="site-header">
+  <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+    <div class="container">
+      <a class="navbar-brand mr-4" href="/">ML-MT App</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggle">
+        <div class="navbar-nav mr-auto">
+          <a class="nav-item nav-link" href="/">Home</a>
+          <a class="nav-item nav-link" href="/about">About</a>
+          <a class="nav-item nav-link" href="/cancer">Cancer</a>
+          <a class="nav-item nav-link" href="/diabetes">Diabetes</a>
+          <a class="nav-item nav-link" href="/heart">Heart</a>
+          <a class="nav-item nav-link" href="/liver">Liver</a>
+          <a class="nav-item nav-link" href="/kidney">Kidney</a>
+           <a class="nav-item nav-link" href="/Malaria">Malaria</a>
+           <a class="nav-item nav-link" href="/Pneumonia">Pneumonia</a>
+        </div>
+        <!-- Navbar Right Side 
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="/login">Login</a>
+          <a class="nav-item nav-link" href="/register">Register</a>
+        </div>-->
+      </div>
+    </div>
+  </nav>
+</header>
+    <div class="container">
+        <h1>Details : </h1>
+    <h3>Welcome</h3>
+    <form action="/result1" method="POST">
+
+    <label for="Radius_mean">Radius_mean : </label>
+    <input type="text" id="Radius_mean" name="Radius_mean">
+    <br>
+
+    <label for="Texture_mean">Texture_mean : </label>
+    <input type="text" id="Texture_mean" name="Texture_mean">
+    <br>
+
+    <label for="BloodPressure">Perimeter_mean : </label>
+    <input type="text" id="Perimeter_mean" name="Perimeter_mean">
+    <br>
+
+    <label for="Area_mean">Area_mean : </label>
+    <input type="text" id="Area_mean" name="Area_mean">
+    <br>
+
+    <label for="Smoothness_mean">Smoothness_mean : </label>
+    <input type="text" id="Smoothness_mean" name="Smoothness_mean">
+    <br>
+
+    <label for="Compactness_mean">Compactness_mean: </label>
+    <input type="text" id="Compactness_mean" name="Compactness_mean">
+    <br>
+
+    <label for="Concavity_mean">Concavity_mean: </label>
+    <input type="text" id="Concavity_mean" name="Concavity_mean">
+    <br>
+
+    <label for="concave points_mean">Concave points_mean: </label>
+    <input type="text" id="concave points_mean" name="concave points_mean">
+    <br>
+
+    <label for="symmetry_mean">Symmetry_mean: </label>
+    <input type="text" id="symmetry_mean" name="symmetry_mean">
+    <br>
+
+    <label for="Compactness_mean">Fractal_dimension_mean: </label>
+    <input type="text" id="fractal_dimension_mean" name="fractal_dimension_mean">
+    <br>
+
+    <label for="radius_se">Radius_se: </label>
+    <input type="text" id="radius_se" name="radius_se">
+    <br>
+
+    <label for="texture_se">Texture_se: </label>
+    <input type="text" id="texture_se" name="texture_se">
+    <br>
+
+    <label for="perimeter_se">Perimeter_se: </label>
+    <input type="text" id="perimeter_se" name="perimeter_se">
+    <br>
+
+    <label for="area_se">Area_se: </label>
+    <input type="text" id="area_se" name="area_se">
+    <br>
+
+    <label for="smoothness_se">Smoothness_se: </label>
+    <input type="text" id="smoothness_se" name="smoothness_se">
+    <br>
+
+    <label for="compactness_se">Compactness_se: </label>
+    <input type="text" id="compactness_se" name="compactness_se">
+    <br>
+
+    <label for="concavity_se">Concavity_se: </label>
+    <input type="text" id="concavity_se" name="concavity_se">
+    <br>
+
+    <label for="concave points_se">Concave points_se: </label>
+    <input type="text" id="concave points_se" name="concave points_se">
+    <br>
+
+    <label for="symmetry_se">Symmetry_se: </label>
+    <input type="text" id="symmetry_se" name="symmetry_se">
+    <br>
+
+    <label for="fractal_dimension_se">Fractal_dimension_se: </label>
+    <input type="text" id="fractal_dimension_se" name="fractal_dimension_se">
+    <br>
+
+    <label for="radius_worst">Radius_worst: </label>
+    <input type="text" id="radius_worst" name="radius_worst">
+    <br>
+
+    <label for="texture_worst">Texture_worst: </label>
+    <input type="text" id="texture_worst" name="texture_worst">
+    <br>
+
+    <label for="perimeter_worst">Perimeter_worst: </label>
+    <input type="text" id="perimeter_worst" name="perimeter_worst">
+    <br>
+
+    <label for="area_worst">Area_worst: </label>
+    <input type="text" id="area_worst" name="area_worst">
+    <br>
+
+    <label for="smoothness_worst">Smoothness_worst: </label>
+    <input type="text" id="smoothness_worst" name="smoothness_worst">
+    <br>
+
+    <label for="compactness_worst">Compactness_worst: </label>
+    <input type="text" id="compactness_worst" name="compactness_worst">
+    <br>
+
+    <label for="concavity_worst">Concavity_worst: </label>
+    <input type="text" id="concavity_worst" name="concavity_worst">
+    <br>
+
+    <label for="concave points_worst">Concave points_worst: </label>
+    <input type="text" id="concave points_worst" name="concave points_worst">
+    <br>
+
+    <label for="symmetry_worst">Symmetry_worst : </label>
+    <input type="text" id="symmetry_worst" name="symmetry_worst">
+    <br>
+
+    <label for="fractal_dimension_worst">Fractal_dimension_worst : </label>
+    <input type="text" id="fractal_dimension_worst" name="fractal_dimension_worst">
+    <br>
+    <br>
+
+    <input type="submit" value="Submit"><br><br>
+</form>
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+</body>
+</html>

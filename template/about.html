@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+	<title>About Page</title>
+</head>
+<style>
+    .img_holder img{
+        max-width: 100%; max-height: 100%;
+    }
+
+    .btn-file {
+    position: relative;
+    overflow: hidden;
+    }
+    .btn-file input[type=file] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        font-size: 100px;
+        text-align: right;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        outline: none;
+        background: white;
+        cursor: inherit;
+        display: block;
+    }
+</style>
+<body>
+
+	<header class="site-header">
+  <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+    <div class="container">
+      <a class="navbar-brand mr-4" href="/">ML-MT App</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggle">
+        <div class="navbar-nav mr-auto">
+          <a class="nav-item nav-link" href="/">Home</a>
+          <a class="nav-item nav-link" href="/about">About</a>
+          <a class="nav-item nav-link" href="/cancer">Cancer</a>
+          <a class="nav-item nav-link" href="/diabetes">Diabetes</a>
+          <a class="nav-item nav-link" href="/heart">Heart</a>
+          <a class="nav-item nav-link" href="/liver">Liver</a>
+          <a class="nav-item nav-link" href="/kidney">Kidney</a>
+          <a class="nav-item nav-link" href="/Malaria">Malaria</a>
+          <a class="nav-item nav-link" href="/Pneumonia">Pneumonia</a>
+
+        </div>
+        <!-- Navbar Right Side 
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="/login">Login</a>
+          <a class="nav-item nav-link" href="/register">Register<
+      </div>-->
+    </div>
+  </nav>
+</header>
+
+	<div class="container">
+		<h1>Details : </h1>
+    <h3>This is a basic machine learning and deep learning based medical app.</h3>
+    <p>The prediction about the disease is made with the help of the machine learning model which itself is trained on the thousands of the datasets</p>
+    <p>So with the following paragraph I gonna be describing about the types of the diseases which gonna be getting employed in this app.</p>
+    <h2>1. Breast Cancer </h2>
+    <div style="text-align: center; margin-top: 20px">
+       <img style="max-width: 600px" src="{{ url_for('static', filename='breast.jpg') }}"/>
+   </div>
+    <p>Breast cancer is cancer that develops from breast tissue. Signs of breast cancer may include a lump in the breast, a change in breast shape, dimpling of the skin, fluid coming from the nipple, a newly inverted nipple, or a red or scaly patch of skin.<br></p>
+
+    <h3>Symptoms</h3>
+    <p>Signs and symptoms of breast cancer may include:</p>
+    <ul>
+      <li>A breast lump or thickening that feels different from the surrounding tissue</li>
+      <li>Change in the size, shape or appearance of a breast
+      </li>
+      <li>
+        Changes to the skin over the breast, such as dimpling
+      </li>
+      <li>
+        A newly inverted nipple
+      </li>
+      <li>Peeling, scaling, crusting or flaking of the pigmented area of skin surrounding the nipple (areola) or breast skin</li>
+      <li>Redness or pitting of the skin over your breast, like the skin of an orange</li>
+    </ul>
+    <h3>Causes</h3>
+    <p>Doctors know that breast cancer occurs when some breast cells begin to grow abnormally. These cells divide more rapidly than healthy cells do and continue to accumulate, forming a lump or mass. Cells may spread (metastasize) through your breast to your lymph nodes or to other parts of your body.<br>
+Breast cancer most often begins with cells in the milk-producing ducts (invasive ductal carcinoma). Breast cancer may also begin in the glandular tissue called lobules (invasive lobular carcinoma) or in other cells or tissue within the breast.
+<br>
+Researchers have identified hormonal, lifestyle and environmental factors that may increase your risk of breast cancer. But it's not clear why some people who have no risk factors develop cancer, yet other people with risk factors never do. It's likely that breast cancer is caused by a complex interaction of your genetic makeup and your environment.</p>
+<br>
+<hr>
+<br>
+
+<h2>2. Diabetes</h2>
+<div style="text-align: center; margin-top: 20px">
+       <img style="max-width: 600px" src="{{ url_for('static', filename='diabetes.jpg') }}"/>
+   </div>
+<p>Diabetes is a disease that occurs when your blood glucose, also called blood sugar, is too high. Blood glucose is your main source of energy and comes from the food you eat. Insulin, a hormone made by the pancreas, helps glucose from food get into your cells to be used for energy.</p>
+<h3>What health problems can people with diabetes develop? </h3>
+<p>Over time, high blood glucose leads to problems such as</p>
+
+ <ul>
+  <li>heart disease</li>
+  <li>stroke</li>
+  <li>kidney disease</li>
+  <li>eye problems</li>
+  <li>dental disease</li>
+  <li>nerve damage</li>
+  <li>foot problems</li>
+</ul>
+<br> 
+<hr>
+<br>
+
+<h2>3.Heart Disease</h2>
+<div style="text-align: center; margin-top: 20px">
+       <img style="max-width: 600px" src="{{ url_for('static', filename='heart.jpg') }}"/>
+   </div>
+<h3>Overview</h3>
+<p>Heart disease describes a range of conditions that affect your heart. Diseases under the heart disease umbrella include blood vessel diseases, such as coronary artery disease; heart rhythm problems (arrhythmias); and heart defects you're born with (congenital heart defects), among others.<br>
+  The term "heart disease" is often used interchangeably with the term "cardiovascular disease." Cardiovascular disease generally refers to conditions that involve narrowed or blocked blood vessels that can lead to a heart attack, chest pain (angina) or stroke. Other heart conditions, such as those that affect your heart's muscle, valves or rhythm, also are considered forms of heart disease.<br>
+Many forms of heart disease can be prevented or treated with healthy lifestyle choices.</p>
+
+<h3>Symptoms</h3>
+ <ul>
+  <li>Chest pain, chest tightness, chest pressure and chest discomfort (angina)</li>
+  <li>Shortness of breath</li>
+  <li>Pain, numbness, weakness or coldness in your legs or arms if the blood vessels in those parts of your body are narrowed</li>
+  <li>Pain in the neck, jaw, throat, upper abdomen or back</li>
+</ul>
+<br> 
+<hr>
+<br>
+
+<h2>4.Liver Disease</h2>
+<div style="text-align: center; margin-top: 20px">
+       <img style="max-width: 600px" src="{{ url_for('static', filename='liver.jpg') }}"/>
+   </div>
+<p>Liver disease is any disturbance of liver function that causes illness. The liver is responsible for many critical functions within the body and should it become diseased or injured, the loss of those functions can cause significant damage to the body. Liver disease is also referred to as hepatic disease.<br>
+
+Liver disease is a broad term that covers all the potential problems that cause the liver to fail to perform its designated functions. Usually, more than 75% or three quarters of liver tissue needs to be affected before a decrease in function occurs.<br></p>
+
+<h3>Symptoms</h3>
+<p>Classic symptoms of liver disease include:</p>
+ <ul>
+  <li>nausea</li>
+  <li>vomiting</li>
+  <li>right upper quadrant abdominal pain, and </li>
+  <li>jaundice (a yellow discoloration of the skin due to elevated bilirubin concentrations in the bloodstream).</li>
+</ul>
+<br> 
+<hr>
+<br>
+<h2>5.Kidney Disease</h2>
+<div style="text-align: center; margin-top: 20px">
+       <img style="max-width: 600px" src="{{ url_for('static', filename='kidney.jpeg') }}"/>
+   </div>
+<h3>Overview</h3>
+<p>The kidneys play key roles in body function, not only by filtering the blood and getting rid of waste products, but also by balancing the electrolyte levels in the body, controlling blood pressure, and stimulating the production of red blood cells.<br>
+
+The kidneys are located in the abdomen toward the back, normally one on each side of the spine. They get their blood supply through the renal arteries directly from the aorta and send blood back to the heart via the renal veins to the vena cava. (The term "renal" is derived from the Latin name for kidney.)<br>
+</p>
+<ul>
+    <li>Lethargy</li>
+   <li> Weakness</li>
+    <li>Shortness of breath</li>
+    <li>Generalized swelling (edema)</li>
+    <li>Generalized weakness due to anemia</li>
+    <li>Loss of appetite</li>
+    <li>Lethargy</li>
+    <li>Fatigue</li>
+    <li>Congestive heart failure</li>
+    <li>Metabolic acidosis</li>
+    <li>High blood potassium (hyperkalemia)</li>
+    <li>Fatal heart rhythm disturbances (arrhythmias) including ventricular tachycardia and ventricular fibrillation</li>
+    <li>
+    Rising urea levels in the blood (uremia) may lead to brain encephalopathy, pericarditis (inflammation of the heart lining), or low calcium blood levels (hypocalcemia)</li>
+  </ul>
+  <br>
+  <hr>
+  <br>
+<h2>6.Malaria</h2>
+<div style="text-align: center; margin-top: 20px">
+       <img style="max-width: 600px" src="{{ url_for('static', filename='malaria.jpg') }}"/>
+   </div>
+<h3>Overview</h3>
+<p>
+Malaria is a life-threatening mosquito-borne blood disease. The Anopheles mosquito transmits it to humans.</p><br>
+<p>The parasites in mosquitos that spread malaria belong to the Plasmodium genus. Over 100 types of Plasmodium parasite can infect a variety of species. Different types replicate at different rates, changing how quickly the symptoms escalate, and the severity of the disease.</p>
+<h3>Symptoms</h3>
+<ul>
+    <li>fever and chills</li>
+    <li>impaired consciousness</li>
+    <li>prostration, or adopting a prone position
+    multiple convulsions</li>
+    <li>deep breathing and respiratory distress</li>
+    <li>abnormal bleeding and signs of anemia</li>
+    <li>clinical jaundice and evidence of vital organ dysfunction</li>
+  </ul>
+  <br>
+  <hr>
+  <br>
+
+  <h2>7.Pneumonia</h2>
+  <div style="text-align: center; margin-top: 20px">
+       <img style="max-width: 600px" src="{{ url_for('static', filename='pneumonia.png') }}"/>
+   </div>
+  <p>Pneumonia is an infection in one or both lungs. It can be caused by bacteria, viruses, or fungi. Bacterial pneumonia is the most common type in adults. Pneumonia causes inflammation in the air sacs in your lungs, which are called alveoli.<p>
+  <h3>Symptopms</h3>
+ <p> Common symptoms include:</p>
+<ul>
+    <li>cough</li>
+    <li>rusty or green phlegm, or sputum, coughed up from lungs
+    fever</li>
+    <li>fast breathing and shortness of breath</li>
+    <li>shaking chills</li>
+    <li>chest pain that usually worsens when taking a deep breath, known as pleuritic pain</li>
+    <li>fast heartbeat</li>
+    <li>fatigue and weakness</li>
+    <li>nausea and vomiting</li>
+    <li>diarrhea</li>
+    <li>sweating</li>
+    <li>headache</li>
+    <li>muscle pain</li>
+    <li>confusion or delirium, especially in older adults
+    dusky or purplish skin color, or cyanosis, from poorly oxygenated blood</li>
+</ul>
+<p>Symptoms can vary depending on other underlying conditions and the type of pneumonia.</p><br><hr>
+<br>
+<hr>
+<h3>How is Machine and Deep Learning Models are employed in the medical field ?</h3>
+<p>Find out ! </p>
+<br>
+<div style="text-align: center; margin-top: 20px">
+    <iframe src="{{ url_for('static', filename='videoplayback') }}" width="853" height="480" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+
+
+	</div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+</body>
+</html>

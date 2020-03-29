@@ -11,6 +11,17 @@
 	<title>About Page</title>
 </head>
 <style>
+	 #main-footer
+    {
+      color: #FFFFFF;
+      font-family: "Segoe UI";
+      background: #2B2B2B;
+      text-align: center;
+      margin-top: 75px;
+      padding: 16px;
+      bottom: 8px;
+    }
+	
     .img_holder img{
         max-width: 100%; max-height: 100%;
     }
@@ -242,7 +253,7 @@ Malaria is a life-threatening mosquito-borne blood disease. The Anopheles mosqui
 <p>Find out ! </p>
 <br>
 <div style="text-align: center; margin-top: 20px">
-    <iframe src="{{ url_for('static', filename='videoplayback') }}" width="853" height="480" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/watch?v=VKnoyiNxflk" width="853" height="480" frameborder="0" allowfullscreen></iframe>
   </div>
 
 
@@ -251,6 +262,8 @@ Malaria is a life-threatening mosquito-borne blood disease. The Anopheles mosqui
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	
+	<footer id="main-footer">
+      Copyright &copy; 2020
+    </footer>
 </body>
 </html>

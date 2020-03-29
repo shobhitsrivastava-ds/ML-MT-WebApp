@@ -84,19 +84,22 @@ def upload_file():
     if request.method == 'GET':
         return render_template('index.html')
     else:
-        file = request.files['image']
-        full_name = os.path.join(UPLOAD_FOLDER, file.filename)
-        file.save(full_name)
+        try:
+            file = request.files['image']
+            full_name = os.path.join(UPLOAD_FOLDER, file.filename)
+            file.save(full_name)
 
-        indices = {0: 'PARASITIC', 1: 'Uninfected', 2: 'Invasive carcinomar', 3: 'Normal'}
-        result = api(full_name)
-        print(result)
+            indices = {0: 'PARASITIC', 1: 'Uninfected', 2: 'Invasive carcinomar', 3: 'Normal'}
+            result = api(full_name)
+            print(result)
 
-        predicted_class = np.asscalar(np.argmax(result, axis=1))
-        accuracy = round(result[0][predicted_class] * 100, 2)
-        label = indices[predicted_class]
-
-    return render_template('predict.html', image_file_name = file.filename, label = label, accuracy = accuracy)
+            predicted_class = np.asscalar(np.argmax(result, axis=1))
+            accuracy = round(result[0][predicted_class] * 100, 2)
+            label = indices[predicted_class]
+            return render_template('predict.html', image_file_name = file.filename, label = label, accuracy = accuracy)
+        except:
+            flash("Please select the image first !!", "danger")      
+            return redirect(url_for("Malaria"))
 
 @app.route('/upload11', methods=['POST','GET'])
 def upload11_file():
@@ -104,18 +107,22 @@ def upload11_file():
     if request.method == 'GET':
         return render_template('index2.html')
     else:
-        file = request.files['image']
-        full_name = os.path.join(UPLOAD_FOLDER, file.filename)
-        file.save(full_name)
+        try:
+            file = request.files['image']
+            full_name = os.path.join(UPLOAD_FOLDER, file.filename)
+            file.save(full_name)
 
-        indices = {0: 'Normal', 1: 'Pneumonia'}
-        result = api1(full_name)
+            indices = {0: 'Normal', 1: 'Pneumonia'}
+            result = api1(full_name)
 
-        predicted_class = np.asscalar(np.argmax(result, axis=1))
-        accuracy = round(result[0][predicted_class] * 100, 2)
-        label = indices[predicted_class]
+            predicted_class = np.asscalar(np.argmax(result, axis=1))
+            accuracy = round(result[0][predicted_class] * 100, 2)
+            label = indices[predicted_class]
+            return render_template('predict1.html', image_file_name = file.filename, label = label, accuracy = accuracy)
+        except:
+            flash("Please select the image first !!", "danger")      
+            return redirect(url_for("Pneumonia"))
 
-    return render_template('predict1.html', image_file_name = file.filename, label = label, accuracy = accuracy)
 
 @app.route('/uploads/<filename>')
 def send_file(filename):

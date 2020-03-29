@@ -58,6 +58,11 @@
         cursor: inherit;
         display: block;
     }
+  #left_m
+    {
+      margin-left: 5px;
+      margin-top: 2px;
+    }
 </style>
 
 <body>
@@ -89,7 +94,7 @@
     </div>
   </nav>
 </header>
-<header class="navbar">
+<header class="container">
 <div id= "left_m" class="col-md-3">
           {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}

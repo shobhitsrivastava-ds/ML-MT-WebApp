@@ -27,18 +27,17 @@
 
 <hr>
 
-<h3> Various datasets used for model development : </h3>
+<h3> Various datasets details used for model development : </h3>
 
-<p><b>Cancer : </p>
-<p><b>Diabetes : </p>
-<p><b>Heart : </p>
-<p><b>Liver : </p>
-<p><b>Kidney : </p>
+<p><b>Cancer : cancer.csv [In the repository]</p>
+<p><b>Diabetes : diabetes.csv [In the repository]</p>
+<p><b>Heart : heart.csv [In the repository]</p>
+<p><b>Liver : https://www.kaggle.com/uciml/indian-liver-patient-records </p>
+<p><b>Kidney : https://www.kaggle.com/mansoordaku/ckdisease </p>
 
 <p><b>Malaria: https://www.kaggle.com/iarunava/cell-images-for-detecting-malaria </p>
 <p><b>Pneumonia: https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia </p>
 
-<p><b>Kernal for Pneumonia model :</b>https://www.kaggle.com/shobhit18th/keras-nn-x-ray-predict-pneumonia-86-54</p>
 <hr>
 
 <p> For Developing the project I have used Flask Framework as base. I have used HTML and CSS for developing basic structure of the project.

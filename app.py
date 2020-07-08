@@ -115,10 +115,16 @@ def upload11_file():
             indices = {0: 'Normal', 1: 'Pneumonia'}
             result = api1(full_name)
 
-            predicted_class = np.asscalar(np.argmax(result, axis=1))
-            accuracy = round(result[0][predicted_class] * 100, 2)
-            label = indices[predicted_class]
-            return render_template('predict1.html', image_file_name = file.filename, label = label, accuracy = accuracy)
+            #predicted_class = np.asscalar(np.argmax(result, axis=1))
+            #accuracy = round(result[0][predicted_class] * 100, 2)
+            #label = indices[predicted_class]
+	    if(result>50):
+		label= indices[1]
+		accuracy= result
+	    else:
+		label= indices[0]
+		accuracy= 100-result
+		return render_template('predict1.html', image_file_name = file.filename, label = label, accuracy = accuracy)
         except:
             flash("Please select the image first !!", "danger")      
             return redirect(url_for("Pneumonia"))

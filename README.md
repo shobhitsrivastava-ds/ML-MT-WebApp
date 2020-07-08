@@ -45,11 +45,11 @@
 <p><b>OpenCV</b></p>
 <p><b>Pandas</b></p>
 <p><b>Numpy</b></p>
+<p><b>HTML</b></p>
+<p><b>CSS</b></p>
+
 
 <hr>
-
-<p> For Developing the project I have used Flask Framework as base. I have used HTML and CSS for developing basic structure of the project.
-  All the coding part is implemented using Python Language.</p>
  <h3> For using the project clone the repository and type the following commands in the termial: </h3>
  <ul>
   <li> $ set FLASK_APP= app.py</li>

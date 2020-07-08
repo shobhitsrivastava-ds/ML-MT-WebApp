@@ -18,16 +18,14 @@
 
 <hr>
 
-<h3> Various kenrals used to train deep learning model </h3>
+<h3> Kernals used for training deep learning model </h3>
 
 <p><b>Kernal for Malaria model :</b>https://www.kaggle.com/shobhit18th/malaria-cell</p>
 
 <p><b>Kernal for Pneumonia model :</b>https://www.kaggle.com/shobhit18th/keras-nn-x-ray-predict-pneumonia-86-54</p>
 <hr>
 
-<hr>
-
-<h3> Various datasets details used for model development : </h3>
+<h3> Details of various datasets used for model development : </h3>
 
 <p><b>Cancer</b> : cancer.csv [In the repository]</p>
 <p><b>Diabetes</b> : diabetes.csv [In the repository]</p>
@@ -40,9 +38,7 @@
 
 <hr>
 
-<hr>
-
-<h3> Requirements for the project : </h3>
+<h3> Tools used for project development: </h3>
 
 <p><b>Python ( 3.7 version)</b></p>
 <p><b>Flask</b></p>
@@ -59,6 +55,8 @@
   <li> $ set FLASK_APP= app.py</li>
   <li> $ flask run</li>
   </ul>
+  
+  <hr>
   
   <p> The whole project is deployed on Heroku Cloud.
   

@@ -29,22 +29,33 @@
 
 <h3> Various datasets details used for model development : </h3>
 
-<p><b>Cancer : cancer.csv [In the repository]</p>
-<p><b>Diabetes : diabetes.csv [In the repository]</p>
-<p><b>Heart : heart.csv [In the repository]</p>
-<p><b>Liver : https://www.kaggle.com/uciml/indian-liver-patient-records </p>
-<p><b>Kidney : https://www.kaggle.com/mansoordaku/ckdisease </p>
+<p><b>Cancer</b> : cancer.csv [In the repository]</p>
+<p><b>Diabetes</b> : diabetes.csv [In the repository]</p>
+<p><b>Heart</b> : heart.csv [In the repository]</p>
+<p><b>Liver</b> : https://www.kaggle.com/uciml/indian-liver-patient-records </p>
+<p><b>Kidney</b> : https://www.kaggle.com/mansoordaku/ckdisease </p>
 
-<p><b>Malaria: https://www.kaggle.com/iarunava/cell-images-for-detecting-malaria </p>
-<p><b>Pneumonia: https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia </p>
+<p><b>Malaria : </b> https://www.kaggle.com/iarunava/cell-images-for-detecting-malaria </p>
+<p><b>Pneumonia: </b> https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia </p>
+
+<hr>
+
+<hr>
+
+<h3> Requirements for the project : </h3>
+
+<p><b>Python ( 3.7 version)</b></p>
+<p><b>Flask</b></p>
+<p><b>OpenCV</b></p>
+<p><b>Pandas</b></p>
+<p><b>Numpy</b></p>
 
 <hr>
 
 <p> For Developing the project I have used Flask Framework as base. I have used HTML and CSS for developing basic structure of the project.
   All the coding part is implemented using Python Language.</p>
- <h3> For using the project use the following commands : </h3>
+ <h3> For using the project clone the repository and type the following commands in the termial: </h3>
  <ul>
-  <li> $ git clone <repo link> </li>
   <li> $ set FLASK_APP= app.py</li>
   <li> $ flask run</li>
   </ul>

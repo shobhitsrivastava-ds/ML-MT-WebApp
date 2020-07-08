@@ -1,6 +1,6 @@
 # ML-MT-WebApp
 
-<img src="https://www.elderresearch.com/hubfs/BLOG_Parkinson%E2%80%99s%20Test%20Recommendation%20Engine.jpg" width="1400" height="370" />
+<img src="https://www.elderresearch.com/hubfs/BLOG_Parkinson%E2%80%99s%20Test%20Recommendation%20Engine.jpg" width="1100" height="200" />
 <p> This is one of major project of my undergraduate degree program.</p>
 <p>Here, I have developed a disease predicting web app which using the concept of machine learning makes predictions about various diseases like Malaria, Pneumonia, Diabetes etc.</p>
 
@@ -39,15 +39,15 @@
 <hr>
 
 <h3> Tools used for project development: </h3>
-
-<p><b>Python ( 3.7 version)</b></p>
-<p><b>Flask</b></p>
-<p><b>OpenCV</b></p>
-<p><b>Pandas</b></p>
-<p><b>Numpy</b></p>
-<p><b>HTML</b></p>
-<p><b>CSS</b></p>
-
+<ul>
+<li><p><b>Python ( 3.7 version)</b></p></li>
+<li><p><b>Flask</b></p></li>
+<li><p><b>OpenCV</b></p></li>
+<li><p><b>Pandas</b></p></li>
+<li><p><b>Numpy</b></p></li>
+<li><p><b>HTML</b></p></li>
+<li><p><b>CSS</b></p></li>
+</ul>
 
 <hr>
  <h3> For using the project clone the repository and type the following commands in the termial: </h3>

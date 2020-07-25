@@ -111,20 +111,15 @@ def upload11_file():
             file = request.files['image']
             full_name = os.path.join(UPLOAD_FOLDER, file.filename)
             file.save(full_name)
-
             indices = {0: 'Normal', 1: 'Pneumonia'}
             result = api1(full_name)
-
-            #predicted_class = np.asscalar(np.argmax(result, axis=1))
-            #accuracy = round(result[0][predicted_class] * 100, 2)
-            #label = indices[predicted_class]
-	    if(result>50):
-		label= indices[1]
-		accuracy= result
-	    else:
-		label= indices[0]
-		accuracy= 100-result
-		return render_template('predict1.html', image_file_name = file.filename, label = label, accuracy = accuracy)
+            if(result>50):
+                label= indices[1]
+                accuracy= result
+            else:
+                label= indices[0]
+                accuracy= 100-result
+            return render_template('predict1.html', image_file_name = file.filename, label = label, accuracy = accuracy)
         except:
             flash("Please select the image first !!", "danger")      
             return redirect(url_for("Pneumonia"))
@@ -153,46 +148,46 @@ def send_file(filename):
     #posts = db.relationship('Post', backref='author', lazy=True)
 
     #def __repr__(self):
-	#	return f"User('{self.username}', '{self.email}', '{self.image_file}')"
+    #   return f"User('{self.username}', '{self.email}', '{self.image_file}')"
 
 
 @app.route("/")
 
 @app.route("/home")
 def home():
-	return render_template("home.html")
+    return render_template("home.html")
  
 
 
 @app.route("/about")
 def about():
-	return render_template("about.html")
+    return render_template("about.html")
 
 
 @app.route("/cancer")
 def cancer():
-	return render_template("cancer.html")
+    return render_template("cancer.html")
 
 
 @app.route("/diabetes")
 def diabetes():
-	#if form.validate_on_submit():
-	return render_template("diabetes.html")
+    #if form.validate_on_submit():
+    return render_template("diabetes.html")
 
 @app.route("/heart")
 def heart():
-	return render_template("heart.html")
+    return render_template("heart.html")
 
 
 @app.route("/liver")
 def liver():
-	#if form.validate_on_submit():
-	return render_template("liver.html")
+    #if form.validate_on_submit():
+    return render_template("liver.html")
 
 @app.route("/kidney")
 def kidney():
-	#if form.validate_on_submit():
-	return render_template("kidney.html")
+    #if form.validate_on_submit():
+    return render_template("kidney.html")
 
 @app.route("/Malaria")
 def Malaria():
@@ -206,33 +201,27 @@ def Pneumonia():
 """
 @app.route("/register", methods=["GET", "POST"])
 def register():
-	form =RegistrationForm()
-	if form.validate_on_submit():
-		#flash("Account created for {form.username.data}!".format("success"))
-		flash("Account created","success")		
-		return redirect(url_for("home"))
-	return render_template("register.html", title ="Register",form=form )
-
+    form =RegistrationForm()
+    if form.validate_on_submit():
+        #flash("Account created for {form.username.data}!".format("success"))
+        flash("Account created","success")      
+        return redirect(url_for("home"))
+    return render_template("register.html", title ="Register",form=form )
 @app.route("/login", methods=["POST","GET"])
 def login():
-	form =LoginForm()
-	if form.validate_on_submit():
-		#if form.email.data =="sho" and form.password.data=="password":
-		flash("You Have Logged in !","success")
-		return redirect(url_for("home"))
-	#else:
-	#	flash("Login Unsuccessful. Please check username and password","danger")
-	return render_template("login.html", title ="Login",form=form )
-
-
-
+    form =LoginForm()
+    if form.validate_on_submit():
+        #if form.email.data =="sho" and form.password.data=="password":
+        flash("You Have Logged in !","success")
+        return redirect(url_for("home"))
+    #else:
+    #   flash("Login Unsuccessful. Please check username and password","danger")
+    return render_template("login.html", title ="Login",form=form )
 def ValuePredictor1(to_predict_list):
     to_predict = np.array(to_predict_list).reshape(1,30)
     loaded_model = joblib.load("model")
     result = loaded_model.predict(to_predict)
     return result[0]
-
-
 @app.route('/result1',methods = ["GET","POST"])
 def result():
     if request.method == 'POST':
@@ -251,20 +240,20 @@ def result():
 def ValuePredictor(to_predict_list, size):
     to_predict = np.array(to_predict_list).reshape(1,size)
     if(size==8):#Diabetes
-    	loaded_model = joblib.load("model1")
-    	result = loaded_model.predict(to_predict)
+        loaded_model = joblib.load("model1")
+        result = loaded_model.predict(to_predict)
     elif(size==30):#Cancer
-    	loaded_model = joblib.load("model")
-    	result = loaded_model.predict(to_predict)
+        loaded_model = joblib.load("model")
+        result = loaded_model.predict(to_predict)
     elif(size==12):#Kidney
-    	loaded_model = joblib.load("model3")
-    	result = loaded_model.predict(to_predict)
+        loaded_model = joblib.load("model3")
+        result = loaded_model.predict(to_predict)
     elif(size==10):
-    	loaded_model = joblib.load("model4")
-    	result = loaded_model.predict(to_predict)
+        loaded_model = joblib.load("model4")
+        result = loaded_model.predict(to_predict)
     elif(size==11):#Heart
-    	loaded_model = joblib.load("model2")
-    	result =loaded_model.predict(to_predict)
+        loaded_model = joblib.load("model2")
+        result =loaded_model.predict(to_predict)
     return result[0]
 
 @app.route('/result',methods = ["POST"])
@@ -276,17 +265,17 @@ def result():
         if(len(to_predict_list)==30):#Cancer
             result = ValuePredictor(to_predict_list,30)
         elif(len(to_predict_list)==8):#Daiabtes
-        	result = ValuePredictor(to_predict_list,8)
+            result = ValuePredictor(to_predict_list,8)
         elif(len(to_predict_list)==12):
-        	result = ValuePredictor(to_predict_list,12)
+            result = ValuePredictor(to_predict_list,12)
         elif(len(to_predict_list)==11):
-        	result = ValuePredictor(to_predict_list,11)
-        	#if int(result)==1:
-            #	prediction ='diabetes'
-        	#else:
-            #	prediction='Healthy' 
+            result = ValuePredictor(to_predict_list,11)
+            #if int(result)==1:
+            #   prediction ='diabetes'
+            #else:
+            #   prediction='Healthy' 
         elif(len(to_predict_list)==10):
-        	result = ValuePredictor(to_predict_list,10)
+            result = ValuePredictor(to_predict_list,10)
     if(int(result)==1):
         prediction='Sorry ! Suffering'
     else:
@@ -295,4 +284,4 @@ def result():
 
 
 if __name__ == "__main__":
-	app.run(debug=True)
+    app.run(debug=True)

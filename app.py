@@ -222,6 +222,8 @@ def ValuePredictor1(to_predict_list):
     loaded_model = joblib.load("model")
     result = loaded_model.predict(to_predict)
     return result[0]
+    
+"""
 @app.route('/result1',methods = ["GET","POST"])
 def result():
     if request.method == 'POST':
@@ -233,7 +235,7 @@ def result():
             prediction='cancer'
         else:
             prediction='Healthy'       
-    return(render_template("result.html", prediction=prediction))"""
+    return(render_template("result.html", prediction=prediction))
 
 
 

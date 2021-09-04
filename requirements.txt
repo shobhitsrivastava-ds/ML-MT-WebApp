@@ -7,5 +7,5 @@ Werkzeug==0.15.5
 tensorflow==2.5.0rc0
 Pillow==2.3.0
 numpy==1.15.1
-scikit-learn==0.22.2
+scikit-learn==0.22.1
 pandas==0.25.1

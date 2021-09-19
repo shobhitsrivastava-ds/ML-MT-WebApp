@@ -1,6 +1,9 @@
 # ML-MT-WebApp
 
-❓ ***Let me know on LinkedIn if you guys want this project to be deployed with Docker and Kubernetes***
+## On request from many of you I have created a telegram chennal where your guys can post your question and then we can have discussions there.
+### Channel link : https://t.me/mymlmt
+
+❓ ***Let me know on telegram if you guys want this project to be deployed with Docker and Kubernetes***
 
 <img src="https://cdn.activestate.com/wp-content/uploads/2018/10/machine-learning-healthcare-blog-hero-1200x799.jpg" width="1100" height="300" />
 <p> This is one of major project of my undergraduate degree program.</p>

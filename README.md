@@ -1,6 +1,6 @@
 # ML-MT-WebApp
 
-## On request from many of you I have created a telegram chennal where your guys can post your question and then we can have discussions there.
+## On request from many of you I have created a telegram chennal where your guys can post your questions and then we can have discussions there about improving this project bit further and further help you guys can get.
 ### Channel link : https://t.me/mymlmt
 
 ❓ ***Let me know on telegram if you guys want this project to be deployed with Docker and Kubernetes***
